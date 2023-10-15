@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PersonComponent } from './person/person.component';
 import { Person } from './interfaces/person';
+
+import { PersonComponent } from './person/person.component';
+import { PersonAltComponent } from './person-alt/person-alt.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, PersonComponent],
+  imports: [CommonModule, PersonComponent, PersonAltComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -23,10 +25,13 @@ export class AppComponent {
   }
 
   person2: Person = {
-    givenName: 'Example',
-    surName: 'xxx',
-    age: 40,
-    email: 'example@ex.com',
-    address: 'Greece'
+    givenName: 'Giorgos',
+    surName: 'Chatzis',
+    age: 22,
+    email: 'gchatz@aueb.com',
+    address: 'Athens, Greece'
   }
+
+  
+  
 }
