@@ -1,5 +1,7 @@
 # Introduction to Angular Framework
 
+## 7. Template driven forms
+
 ## 6. Component Output
 
 ## 5. Event Binding (template -> controller)
