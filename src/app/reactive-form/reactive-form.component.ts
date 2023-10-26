@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Person } from '../interfaces/person';
 
-@Component({
+@Component({ 
   selector: 'app-reactive-form',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
@@ -10,6 +11,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrls: ['./reactive-form.component.css']
 })
 export class ReactiveFormComponent {
+  @Output() person = new EventEmitter<Person>()
   form = new FormGroup({
     givenName: new FormControl('', Validators.required),
     surName: new FormControl('', Validators.required),
@@ -18,5 +20,9 @@ export class ReactiveFormComponent {
     address: new FormControl('', Validators.required),
     photoURL: new FormControl(''),
   })
+
+  onSubmit() {
+    this.person.emit(this.form.value as Person)
+  }
 
 }
