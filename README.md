@@ -1,6 +1,10 @@
 # Introduction to Angular Framework
 
-## 10. CRUD users scaffolding
+## 12. CRUD users: Read Users
+
+## 11. CRUD users: List Users
+
+## 10. CRUD users: scaffolding
 
 ## 9. Http Client
 
@@ -16,12 +20,12 @@
 - Input handler
 - Two way binding
 
-## 4. *ngFor Directive
+## 4. \*ngFor Directive
 
 ## 3. Alternate component input
 
 - input | undefined
-- *ngIf to show conditionally on template
+- \*ngIf to show conditionally on template
 - ng-container & ng-template
 
 ## 2.
