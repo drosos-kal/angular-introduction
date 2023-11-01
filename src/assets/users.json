@@ -100,15 +100,6 @@
       "id": 11
     },
     {
-      "givenName": "George",
-      "surName": "Fragkoudakis",
-      "age": 19,
-      "email": "george@ecample.com",
-      "address": "Palini, Greece",
-      "photoURL": "https://i.pravatar.cc/?img=34",
-      "id": 12
-    },
-    {
       "givenName": "Peter",
       "surName": "Jackson",
       "age": 56,
@@ -125,33 +116,6 @@
       "address": "Frinis 8",
       "photoURL": "https://i.pravatar.cc/?img=23",
       "id": 14
-    },
-    {
-      "givenName": "tralala",
-      "surName": "tralalo",
-      "age": "55",
-      "email": "tralala@tralalo.gr",
-      "address": "xixaxo",
-      "photoURL": "",
-      "id": 15
-    },
-    {
-      "givenName": "Δροσος",
-      "surName": "Καλυβας",
-      "age": "55",
-      "email": "drososkal@yahoo.gr",
-      "address": "Φρύνης 8",
-      "photoURL": "",
-      "id": 16
-    },
-    {
-      "givenName": "Drosos",
-      "surName": "Kalyvas",
-      "age": "88",
-      "email": "drososkal@yahoo.gr",
-      "address": "Frinis 8",
-      "photoURL": "https://i.pravatar.cc/?img=23",
-      "id": 17
     },
     {
       "givenName": "Δροσος",
