@@ -1,0 +1,55 @@
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  Output,
+  SimpleChanges,
+} from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormComponent } from 'src/app/reactive-form/reactive-form.component';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
+import { Person } from 'src/app/interfaces/person';
+
+@Component({
+  selector: 'app-crud-user-form',
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule],
+  templateUrl: './crud-user-form.component.html',
+  styleUrls: ['./crud-user-form.component.css'],
+})
+export class CrudUserFormComponent implements OnChanges {
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['personInput']?.currentValue) {
+      this.form.patchValue(changes['personInput'].currentValue);
+    }
+  }
+
+  @Input() title = 'User Form';
+  @Input() personInput: Person | undefined;
+  @Output() person = new EventEmitter<Person>();
+
+  form = new FormGroup({
+    id: new FormControl(0),
+    givenName: new FormControl('', Validators.required),
+    surName: new FormControl('', Validators.required),
+    age: new FormControl(0, [
+      Validators.required,
+      Validators.min(18),
+      Validators.max(120),
+    ]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    address: new FormControl('', Validators.required),
+    photoURL: new FormControl(''),
+  });
+
+  onSubmit() {
+    this.person.emit(this.form.value as Person);
+    this.form.reset();
+  }
+}
